@@ -1,0 +1,12 @@
+.div {
+  margin: 5rem 0rem -3rem 14rem;
+  background: border-box #9a178a;
+  padding: 0.2px 3px 1px 16px;
+  border-radius: 30%;
+  color: #fff;
+  background-color: #000;
+}
+
+.font {
+  font-size: 20px;
+}

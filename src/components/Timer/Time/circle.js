@@ -5,10 +5,11 @@ const Circle = styled.div`
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  background-color: #0eb4e6;
+  background-color: #a983d3;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 `;
 
 export default Circle;
