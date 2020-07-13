@@ -84,6 +84,7 @@ export default class index extends Component {
     this.setState((prev) => ({
       ...prev,
       time: 10,
+
       shortCounter: addShortBreak++,
       mode: true,
       breakTime: false,
