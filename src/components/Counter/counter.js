@@ -6,7 +6,6 @@ export default function index(props) {
 
   return (
     <div className={Css.div}>
-      <h4>Round</h4>
       <span className={Css.font}>
         {shortCounter} / {mainCounter}
       </span>

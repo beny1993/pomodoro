@@ -1,9 +1,12 @@
 .button {
-  margin: 0px auto;
   display: block;
   font-size: inherit;
-  background: #65ca76;
-  padding: 0.5rem 0.5rem;
-  background-color: #fff;
   box-shadow: 2px 3px 8px black;
+  border-radius: 50%;
+  margin: 2rem 0rem 0rem 8rem;
+  padding: 1rem;
+  background: #000;
+  color: #fff;
+  border: 1px solid #6f6f6f00;
+  border-color: #fff;
 }

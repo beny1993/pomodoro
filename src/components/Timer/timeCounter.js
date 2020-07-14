@@ -1,7 +1,11 @@
 import React, { Component } from "react";
+
 import Circle from "../Timer/Time/circle";
+
 import Time from "../Timer/Time/time";
 import Counter from "../../components/Counter/counter";
+import Button from "./Time/button";
+import Css from "./text.module.css";
 
 export default class index extends Component {
   constructor(props) {
@@ -48,7 +52,7 @@ export default class index extends Component {
   startTimer = () => {
     this.intervalHandler = setInterval(() => this.tick(), 1000);
     this.setState({
-      time: 15,
+      time: 1500,
       breakTime: true,
       mode: true,
       text: "Focus",
@@ -83,8 +87,7 @@ export default class index extends Component {
     let addShortBreak = this.state.shortCounter;
     this.setState((prev) => ({
       ...prev,
-      time: 10,
-
+      time: 900,
       shortCounter: addShortBreak++,
       mode: true,
       breakTime: false,
@@ -95,7 +98,7 @@ export default class index extends Component {
     this.intervalHandler = setInterval(() => this.tick(), 1000);
     let addLongBreak = this.state.longBreak;
     this.setState({
-      time: 30,
+      time: 1800,
       longBreak: addLongBreak++,
       shortCounter: 0,
       breakTime: false,
@@ -107,13 +110,17 @@ export default class index extends Component {
     return (
       <>
         <Circle>
-          <Time
-            states={this.state}
-            onStart={this.startTimer}
-            onStop={this.stopTimer}
-          />
-          <h4>{this.state.text}</h4>
+          <Time states={this.state} />
+          <div>
+            <h4 className={Css.font}>{this.state.text}</h4>
+          </div>
         </Circle>
+
+        <Button
+          states={this.state}
+          onStart={this.startTimer}
+          onStop={this.stopTimer}
+        />
         <Counter state={this.state} />
       </>
     );

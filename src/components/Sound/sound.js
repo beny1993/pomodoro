@@ -7,10 +7,9 @@ export default class sound extends Component {
     this.state = {
       checked: true,
     };
-    console.log(this.props);
   }
   onChangeHandler = (props) => {
-    if (this.props.state.play === false) {
+    if (this.props.state.play === true) {
       this.props.play();
       this.setState({ checked: false });
     } else {

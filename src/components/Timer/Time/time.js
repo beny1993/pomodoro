@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Css from "./time.module.css";
+import Css from "../text.module.css";
 
 export default class time extends Component {
   render() {
@@ -8,19 +8,9 @@ export default class time extends Component {
     return (
       <>
         <div>
-          <h1 style={{ padding: "4rem" }}>
+          <span className={Css.timer}>
             {states.minutes} : {states.seconds}
-          </h1>
-          <button
-            className={Css.button}
-            onClick={states.mode ? this.props.onStop : this.props.onStart}
-          >
-            {states.mode ? (
-              <i className="fas fa-pause"></i>
-            ) : (
-              <i className="fas fa-play"></i>
-            )}
-          </button>
+          </span>
         </div>
       </>
     );
